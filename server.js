@@ -5,7 +5,6 @@ console.log(`process.env.SERVER = ${process.env.SERVER}`);
 const SERVER = process.env.SERVER ? process.env.SERVER : "http://localhost:8082";
 
 // express is a nodejs web server
-// https://www.npmjs.com/package/express
 const express = require('express');
 
 // converts content in the request into parameter req.body
@@ -19,7 +18,6 @@ const bodyParser = require('body-parser');
 const engine = require('express-handlebars').engine;
 
 // request is used to make REST calls to the backend microservice
-// details here: https://www.npmjs.com/package/request
 var request = require('request');
 
 // create the server
@@ -32,7 +30,7 @@ app.engine('hbs', engine({
     defaultView: 'default'
 }));
 
-// set up the parser to get the contents of data from html forms 
+// Set up the parser to get the contents of data from html forms 
 // this would be used in a POST to the server as follows:
 // app.post('/route', urlencodedParser, (req, res) => {}
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -157,9 +155,6 @@ app.post('/event/unlike',
     });    
 
 // create other get and post methods here - version, login,  etc
-
-
-
 
 
 // generic error handling
