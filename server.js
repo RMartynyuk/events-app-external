@@ -8,7 +8,6 @@ const SERVER = process.env.SERVER ? process.env.SERVER : "http://localhost:8082"
 const express = require('express');
 
 // converts content in the request into parameter req.body
-// https://www.npmjs.com/package/body-parser
 const bodyParser = require('body-parser');
 
 // express-handlebars is a templating library 
